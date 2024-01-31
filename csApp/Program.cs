@@ -11,6 +11,7 @@ class Program
         Console.WriteLine("Console Calculator in C#\r");
         Console.WriteLine("------------------------\n");
 
+        calculatorLib.Calculator cal = new calculatorLib.Calculator();
         while (!endApp)
         {
             // Declare variables and set to empty.
@@ -52,7 +53,7 @@ class Program
 
             try
             {
-                result = calculatorLib.Calculator.DoOperation(cleanNum1, cleanNum2, op);
+                result = cal.DoOperation(cleanNum1, cleanNum2, op);
                 if (double.IsNaN(result))
                 {
                     Console.WriteLine("This operation is invalid.\n");
