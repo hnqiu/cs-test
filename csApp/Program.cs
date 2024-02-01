@@ -2,6 +2,8 @@
 // A Calculator console app from
 // https://learn.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-console?view=vs-2022
 
+using calculatorLib;
+
 class Program
 {
     static void Main(string[] args)
@@ -79,6 +81,9 @@ class Program
 
             Console.WriteLine("\n"); // Friendly linespacing.
         }
+
+        // Add call to close the JSON writer before return
+        cal.Finish();
         return;
     }
 }
